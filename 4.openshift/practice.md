@@ -12,7 +12,7 @@
 **Objectives:**
 
 - Create a new BuildConfig to build the container image from the cluster
-    - Make use of the code in `source/python-app` from the repository https://github.com/musghost/belastingdienst
+    - Make use of the code in `https://github.com/musghost/exmple-app-openshift`
     - The output of the image should be an ImageStream
 - Trigger the build using the oc command
 
