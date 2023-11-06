@@ -40,3 +40,4 @@
 - Remove all these resources and re-create them with the `oc apply` command
 - Create a kustomization file and include all these configurations
   - Create the objects with one single command `oc kustomize`
+  - kustomization documentation https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
