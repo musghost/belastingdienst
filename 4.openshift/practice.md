@@ -26,3 +26,17 @@
   - CPU 550m
   - Memory 512Mi
 - Trigger a new BuildConfig and check if the automatically deploys the new version
+
+## Time to use Infrastructure as Code
+
+**Objectives:**
+
+- Create/get/download the manifest yaml files of the:
+  - BuildConfig
+  - ImageStream
+  - Service
+  - Route
+  - DeploymentConfig
+- Remove all these resources and re-create them with the `oc apply` command
+- Create a kustomization file and include all these configurations
+  - Create the objects with one single command `oc kustomize`
