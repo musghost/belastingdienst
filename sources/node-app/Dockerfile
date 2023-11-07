@@ -1,4 +1,4 @@
-FROM node:18
+FROM registry.access.redhat.com/ubi8/nodejs-16
 # Create app directory
 WORKDIR /usr/src/app
 # Install app dependencies
