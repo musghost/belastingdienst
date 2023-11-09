@@ -1,0 +1,15 @@
+namespace: foo
+
+configMapGenerator:
+- name: html
+  files:
+  - index.html
+
+resources:
+- namespace.yaml
+- deployment.yaml
+- service.yaml
+
+commonLabels:
+  app: foo
+  environment: test
