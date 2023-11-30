@@ -5,7 +5,7 @@ RUN wget https://dev.mysql.com/get/mysql80-community-release-el8-9.noarch.rpm &&
     rm mysql80-community-release-el8-9.noarch.rpm &&\
     yum install yum-utils -y &&\
     yum-config-manager --enable mysql80-community &&\
-    yum install mysql-community-devel.aarch64 -y &&\
+    yum install mysql-community-devel.x86_64 -y &&\
     yum install python3-devel -y
 
 COPY . /app
