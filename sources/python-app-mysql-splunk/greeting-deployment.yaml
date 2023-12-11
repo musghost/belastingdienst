@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greeting-app
+  namespace: greeting
+  labels:
+    app: greeting-app
+    name: greeting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greeting-app
+      name: greeting-app
+  template:
+    metadata:
+      labels:
+        app: greeting-app
+        name: greeting-app
+    spec:
+      containers:
+      - name: greeting-app
+        image: YOUR_CONTAINER_REPO
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MYSQL_HOST
+          value: mysql-deployment
+        - name: MYSQL_USER
+          value: flaskuser
+        - name: MYSQL_PASSWORD
+          value: flaskpwd!
+        resources: {}
+        command:
+        - /bin/bash
+        - -c
+        - |
+          python3 app.py
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: greeting-app
+  namespace: greeting
+spec:
+  selector:
+    name: greeting-app
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: NodePort

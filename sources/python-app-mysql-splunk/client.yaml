@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-greeting-app
+  namespace: greeting
+spec:
+  containers:
+  - name: client-greeting-app
+    image: YOUR_CONTAINER_REPO
+    resources: {}
+    command:
+    - /bin/bash
+    - -c
+    - |
+      python3 client.py
