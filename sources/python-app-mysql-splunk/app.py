@@ -1,4 +1,3 @@
-from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from flask import Flask, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 import os
