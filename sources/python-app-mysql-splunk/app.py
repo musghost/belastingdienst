@@ -4,8 +4,6 @@ import os
 
 app = Flask(__name__)
 
-FlaskInstrumentor().instrument_app(app)
-
 
 # Configure MySQL
 app.config['MYSQL_HOST'] =os.environ.get("MYSQL_HOST", "mysql-service")
